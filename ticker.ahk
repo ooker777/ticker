@@ -1,10 +1,10 @@
-; Simple Time Tracker
+; ticker - A Simple Time Tracker
 ; track your time usage on a daily basis
 
 #InstallKeybdHook
 #InstallMouseHook
 Menu, Tray, Icon, %A_WinDir%\system32\shell32.dll, 44
-Menu, Tray, Tip, Simple Time Tracker`nPress right control to see details
+Menu, Tray, Tip, ticker - A Simple Time Tracker`nPress right control to see details
 
 SetWorkingDir, C:\Users\%A_UserName%\Documents
 SetTimer, CheckTime, 60000 ; updates every 1 minute
@@ -60,8 +60,8 @@ rctrl::
                                . "`n空闲：`t"  FormatMinutes(IdleTime)
                                . "`n总计：`t"  FormatMinutes(TotalTime)
     Gui, -SysMenu
-    Gui, Show
-    Keywait,RCtrl, D
-    Keywait,RCtrl
+    FormatTime, thedate, , yyyy/MM/dd
+    Gui, Show, , Track Log - %thedate%
+    Keywait, Esc, D T5
     Gui, Destroy
 Return
