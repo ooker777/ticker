@@ -7,4 +7,9 @@ This is a modification from [Rustingsword's script](https://gist.github.com/Rust
 
 ![](https://i.imgur.com/0koxEKo.png)
 
+To-do: 
+[ ] Time spent from last idle
+[ ] Time spent on non-focused activities from last idle
+[ ] Time shift
+
 Apparently today I have spent 4 hours to write this script but only 45 minutes to read textbook. I hope once it's done this chronic situation can be reversed.
